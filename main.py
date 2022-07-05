@@ -12,7 +12,7 @@ def apart(sentence,dict):
             x -= 1
             sentence = sentence[0:x]
 
-def main():
+def breaking():
     dict_S = dict()
     result = list()
     with open('dict_no_space.txt','r',encoding = 'utf-8') as dictionary:
@@ -26,7 +26,6 @@ def main():
         temp = apart(sentence[start:],dict_S)#找出對應的字元 放入temp
         result.append(temp)#加入LIST中
         start += len(temp) #找到了一個字元，理當要往前進
-    print(result)
-#這個做法從後面跟前面都可以，但兩種方法會導致不一樣的結果
-if __name__ == '__main__':
-    main()
+    return result
+
+
